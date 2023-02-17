@@ -13,7 +13,7 @@ listint_t *swap_two(listint_t *a, listint_t *b, listint_t **list)
 		(a->prev)->next = b;
 	else
 		*list = b, b->prev = NULL;
-	if ((b->next))
+	if (b->next)
 		(b->next)->prev = a;
 	b->prev = a->prev;
 	a->prev = b;
@@ -23,7 +23,7 @@ listint_t *swap_two(listint_t *a, listint_t *b, listint_t **list)
 }
 
 /**
- * inserion_sort_list - sorts list in ascending order
+ * insertion_sort_list - sorts list in ascending order
  * @list: a doubly linked list of integers to be sorted
  */
 void insertion_sort_list(listint_t **list)
